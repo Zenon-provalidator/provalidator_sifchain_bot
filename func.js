@@ -108,7 +108,7 @@ function getProvalidatorDetail(){
 
 function getSifDexPrice(tokenDenom){
 	try{
-		let json = fetch(process.env.SIF_DEX_API_URL).json()
+		let json = fetch(process.env.SIFCHAIN_DEX_API).json()
 		return parseFloat(json.body.rowanUSD.toString())
 	} catch(err){
 		console.error(err)
