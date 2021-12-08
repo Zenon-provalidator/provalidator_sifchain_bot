@@ -98,8 +98,8 @@ function getProvalidatorDetail(){
 			obj.tokens = json[i].tokens
 		}
 		//랭크에서 팀 밸리데이터 개수 만큼 빼줘야함.
-		if(team_validators.indexOf(json[i].moniker) >=0){
-			teamRank = teamRank + 1 
+		if(team_validators.indexOf(json[i].moniker) >=0 && json[i].status ==3){
+			teamRank = teamRank + 1
 		}
 	}
 	obj.teamRank = teamRank
