@@ -39,7 +39,7 @@ function getMessage(coin){
 				prvTokens = (prvDetail.tokens/ 1000000000000000000).toFixed(0)
 				
 				let wJson = {
-					"Price" : Price,
+					"price" : price,
 					"maxTokens" : maxTokens,
 					"stakedTokens" : stakedTokens,
 					"stakedPercent" : stakedPercent,
