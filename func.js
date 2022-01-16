@@ -39,6 +39,7 @@ function getMessage(coin){
 				prvTokens = (prvDetail.tokens/ 1000000000000000000).toFixed(0)
 				
 				let wJson = {
+					"Price" : Price,
 					"maxTokens" : maxTokens,
 					"stakedTokens" : stakedTokens,
 					"stakedPercent" : stakedPercent,
@@ -106,7 +107,7 @@ function getProvalidatorDetail(){
 	return obj	
 }
 
-function getSifDexPrice(tokenDenom){
+function getSifDexPrice(){
 	try{
 		let json = fetch(process.env.SIFCHAIN_DEX_API).json()
 		return parseFloat(json.body.rowanUSD.toString())
@@ -135,7 +136,8 @@ function getSifchainInfo(){
 }
 
 module.exports = {
-	getMessage : getMessage,
-	getSifchainInfo : getSifchainInfo,
-	getProvalidatorDetail : getProvalidatorDetail
+	getMessage: getMessage,
+	getSifchainInfo: getSifchainInfo,
+	getProvalidatorDetail: getProvalidatorDetail,
+	getSifDexPrice: getSifDexPrice
 }
