@@ -34,7 +34,7 @@ function getMessage(coin){
 				notStakedTokens = maxTokens - stakedTokens
 				notStakedPercent = (notStakedTokens / maxTokens * 100).toFixed(0)
 				prvDetail = getProvalidatorDetail()//get provalidator detail info
-				prvRank = prvDetail.rank - prvDetail.teamRank
+				prvRank = prvDetail.rank// - prvDetail.teamRank
 				prvRate = (prvDetail.rate * 100)
 				prvTokens = (prvDetail.tokens/ 1000000000000000000).toFixed(0)
 				
