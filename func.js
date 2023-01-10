@@ -31,9 +31,8 @@ function getMessage(coin){
 				price = getSifDexPrice().toFixed(4)
 				maxTokens = (sifchainInfo.max_tokens/ 1000000000000000000).toFixed(0)
 				stakedTokens = (sifchainInfo.bonded_tokens / 1000000000000000000 ).toFixed(0)
-				stakedPercent = (stakedTokens / maxTokens * 100).toFixed(0)
-				notStakedTokens = maxTokens - stakedTokens
-				notStakedTokens = sifchainInfo.not_bonded_tokens				
+				stakedPercent = (stakedTokens / maxTokens * 100).toFixed(0)				
+				notStakedTokens = maxTokens - stakedTokens				
 				notStakedPercent = (notStakedTokens / maxTokens * 100).toFixed(0)
 				prvDetail = getProvalidatorDetail()//get provalidator detail info
 				prvRank = prvDetail.rank// - prvDetail.teamRank
